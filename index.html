@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Image Upload</title>
+</head>
+
+<body>
+    <div class="flex flex-col justify-center items-center m-auto h-auto w-5/6 bg-gray-200 px-3 pb-8 space-y-2 md:w-2/3">
+        <section class="w-full flex flex-col justify-center items-center mb-1 px-5 pt-3">
+            <div class="mx-auto w-full flex justify-between px-3">
+                <button type="button" class="hidden mx-auto px-3 py-1.5 text-white bg-emerald-700 cursor-pointer font-normal text-xs leading-tight uppercase rounded shadow-md hover:bg-emerald-900 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out" id="take-photo">
+                    Take Photo
+                </button>
+                <button type="button" class="hidden mx-auto px-3 py-1.5 text-white bg-emerald-700 cursor-pointer font-normal text-xs leading-tight uppercase rounded shadow-md hover:bg-emerald-900 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out" id="switch-camera">
+                    Switch
+                </button>
+            </div>
+            <div class="mx-auto w-full">
+                <button type="button" class="mx-auto px-3 py-1.5 text-white bg-emerald-700 cursor-pointer font-normal text-xs leading-tight uppercase rounded shadow-md hover:bg-emerald-900 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out" id="open-camera">
+                    Open Camera
+                </button>
+            </div>
+        </section>
+        <section class="flex justify-between items-center flex-col py-2">
+            <div class="w-full md:w-1/2" id="webcam-camera">
+            </div>
+            <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-20">
+                <div class="flex flex-wrap -m-1 md:-m-2" id="webcam-snapshot">
+                </div>
+            </div>
+        </section>
+        <!-- <section class="overflow-hidden text-gray-700 my-2">
+        	<div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-20">
+        		<div class="flex flex-wrap -m-1 md:-m-2" id="webcam-snapshot">
+        		</div>
+        	</div>
+        </section> -->
+        <section class="w-full flex flex-col justify-center items-center space-y-2 px-5">
+            <input
+            	type="text"
+            	id="event-name"
+            	class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Name"
+            />
+            <input
+            	type="date"
+            	id="date-uploaded"
+            	class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            />
+            <input
+            	type="text"
+            	id="event-description"
+            	class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Description"
+            />
+            <input
+            	type="text"
+            	id="event-location"
+            	class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Location"
+            />
+            <button
+            	type="button"
+            	class="inline-block m-auto px-3 py-1.5 text-white bg-emerald-700 cursor-pointer font-normal text-xs leading-tight uppercase rounded-full shadow-md hover:bg-emerald-900 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+            	id="upload-event-details"
+            >
+                Upload Event
+            </button>
+        </section>
+        <section class="w-full mx-auto">
+            <ul class="hidden list-none bg-white rounded mt-2 p-1 w-full" id="uploaded-events">
+			</ul>
+        </section>
+    </div>
+    <div id="modal-section">
+    </div>
+  
+    <script src="./webcam.min.js"></script>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
